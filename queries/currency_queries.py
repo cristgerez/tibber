@@ -1,4 +1,3 @@
-
 create_temp_currencies_table = """
 CREATE TEMPORARY TABLE staging_currencies (
     code TEXT PRIMARY KEY, 
