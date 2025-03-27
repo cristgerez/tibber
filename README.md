@@ -16,7 +16,7 @@ pip install -r requirements.txt
 }
 ```
 
-To run a job type any of this in ther terminal:
+To run a job, type any of this in your terminal:
 
 ```cli
 python main.py --job currencies
