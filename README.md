@@ -5,7 +5,7 @@
 pip install -r requirements.txt
 ```
 
-- Add database config to a jason in the root of the folder:
+- Add database config to a jason called db_config.json in the root of the folder:
 ```json 
 {
   "dbname": "dbname",
