@@ -1,11 +1,3 @@
-create_checkpoint_table_query = """
-CREATE TABLE IF NOT EXISTS checkpoints.ingestion_checkpoints (
-    id SERIAL PRIMARY KEY,
-    pipeline_name TEXT NOT NULL,
-    last_system_timestamp TIMESTAMPTZ NOT NULL,
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-"""
 
 get_checkpoint_query = """
 SELECT last_system_timestamp 
@@ -20,14 +12,6 @@ SELECT EXISTS (
     SELECT 1
     FROM information_schema.tables 
     WHERE table_name = 'ingestion_checkpoints'
-);
-"""
-
-check_item_staging_table_query = """
-SELECT EXISTS (
-    SELECT 1
-    FROM information_schema.tables 
-    WHERE table_name = 'item_prices_staging'
 );
 """
 
@@ -60,11 +44,6 @@ CREATE TABLE IF NOT EXISTS public.item_prices_staging (
 );
 
 TRUNCATE TABLE public.item_prices_staging;
-"""
-
-copy_csv_to_staging_query = """
-COPY public.item_prices_staging (id, item, price, currency, created_at, updated_at, system_timestamp)
-FROM STDIN WITH CSV HEADER
 """
 
 insert_df_into_staging_query = """
