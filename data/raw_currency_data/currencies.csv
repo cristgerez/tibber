@@ -1,0 +1,34 @@
+code,name,symbol
+EUR,Euro,€
+USD,US Dollar,$
+JPY,Japanese Yen,¥
+BGN,Bulgarian Lev,BGN
+CZK,Czech Koruna,CZK
+DKK,Danish Krone,DKK
+GBP,British Pound,£
+HUF,Hungarian Forint,HUF
+PLN,Polish Zloty,PLN
+RON,Romanian Leu,RON
+SEK,Swedish Krona,SEK
+CHF,Swiss Franc,CHF
+ISK,Icelandic Króna,ISK
+NOK,Norwegian Krone,NOK
+HRK,Croatian Kuna,HRK
+RUB,Russian Ruble,RUB
+TRY,Turkish Lira,TRY
+AUD,Australian Dollar,A$
+BRL,Brazilian Real,R$
+CAD,Canadian Dollar,CA$
+CNY,Chinese Yuan,CN¥
+HKD,Hong Kong Dollar,HK$
+IDR,Indonesian Rupiah,IDR
+ILS,Israeli New Shekel,₪
+INR,Indian Rupee,₹
+KRW,South Korean Won,₩
+MXN,Mexican Peso,MX$
+MYR,Malaysian Ringgit,MYR
+NZD,New Zealand Dollar,NZ$
+PHP,Philippine Peso,₱
+SGD,Singapore Dollar,SGD
+THB,Thai Baht,THB
+ZAR,South African Rand,ZAR
