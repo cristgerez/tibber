@@ -21,6 +21,7 @@ pip install -r requirements.txt
 ```cli
 python main.py --job currencies
 python main.py --job batch
+python main.py --job batch --files batch1.csv batch2.csv batch3.csv  
 python main.py --job view
 python main.py --job all  # Default
 ```
