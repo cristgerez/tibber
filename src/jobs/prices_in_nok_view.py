@@ -24,5 +24,3 @@ class NokView:
         self.connection.commit()
         self.cursor.close()
         self.connection.close()
-
-NokView().create_view()

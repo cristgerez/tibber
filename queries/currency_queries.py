@@ -4,8 +4,6 @@ CREATE TEMPORARY TABLE staging_currencies (
     name TEXT NOT NULL, 
     symbol TEXT
 );
-
-
 """
 
 create_temp_currency_convertion_rates_table = """

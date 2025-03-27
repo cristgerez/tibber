@@ -1,7 +1,8 @@
 import json
 import os
 import pathlib
-from typing import Any, Dict, List, Tuple
+from typing import List
+from datetime import datetime
 
 import logging
 import pandas as pd
@@ -65,7 +66,7 @@ class BatchItemProcessing:
             self.cursor.execute(create_and_insert_query)
             self.connection.commit()
 
-            self.last_checkpoint_date = '1900-01-01T01:01:00+01:00'
+            self.last_checkpoint_date = datetime.fromisoformat('1900-01-01T01:01:00+01:00')
 
             logger.info("Table created and initial checkpoint set.")
 
@@ -129,15 +130,10 @@ class BatchItemProcessing:
             except Exception as e:
 
                 logger.error(f'Update for file {file} was unsuccessful. Execution will be stopped. Error: {e}')
-
                 self.connection.rollback()
+                break
 
         logger.info(f'Item price table was successfully updated.')
         logger.info(f'Checkpoint date is {self.last_checkpoint_date}.')
         self.cursor.close()
         self.connection.close()
-
-
-
-processor = BatchItemProcessing()
-processor.batch_task()

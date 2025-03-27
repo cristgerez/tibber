@@ -21,6 +21,7 @@ Thumbs.db
 
 # Secrets and configs
 db_config.json
+db_config2.json
 ./src/check.ipynb
 .env
 
